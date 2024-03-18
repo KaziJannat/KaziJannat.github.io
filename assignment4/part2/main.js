@@ -14,17 +14,19 @@ const alternativeText = ['Closeup of a human eye', 'Closeup of a natural rock', 
 
 /* Looping through images */
 filenames.forEach((src, index) => {
-    const img = document.createElement('img');
-    img.src = `images/${src}`;
-    img.alt = alternativeText[index];
-    thumbBar.appendChild(img)
+    const newImage = document.createElement('img');
+    newImage.src = `images/${src}`;
+    newImage.alt = alternativeText[index];
+
+    newImage.addEventListener('click', displayFullImage)
+    thumbBar.appendChild(newImage)
 });
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
-
+function displayFullImage(e) {
+    const element = e.target;
+    displayedImage.src = element.src;
+    displayFullImage.alt = element.alt
+}
 
 /* Wiring up the Darken/Lighten button */
 
