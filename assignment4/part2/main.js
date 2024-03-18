@@ -29,7 +29,21 @@ function displayFullImage(e) {
 }
 
 /* Wiring up the Darken/Lighten button */
+btn.addEventListener('click', changeOverlay);
 
+function changeOverlay() {
+    const currentStatus = btn.getAttribute('class')
+    if (currentStatus === 'dark') {
+        btn.setAttribute('class', 'light')
+        btn.innerHTML = 'Lighten'
+        overlay.style.backgroundColor = 'rgb(0 0 0 / 50%)'
+    }
+    if (currentStatus === 'light') {
+        btn.setAttribute('class', 'dark')
+        btn.innerHTML = 'Darken'
+        overlay.style.backgroundColor = 'rgb(0 0 0 / 0%)'
+    }
+}
 
 
 
