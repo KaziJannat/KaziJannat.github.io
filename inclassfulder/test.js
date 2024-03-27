@@ -29,3 +29,12 @@ draw() {
     ctx.fill();
   }
   
+
+  <><html lang="en-US" /><body>
+</body> 
+<form>
+  <fieldset>
+    <input type= "radio" name= "size" id= "size_/>
+  </fieldset>
+</form>
+</>
